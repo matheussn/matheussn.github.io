@@ -1,0 +1,59 @@
+div {
+    overflow: hidden;
+}
+
+.noStyleType {
+    list-style-type: none;
+}
+
+.img-main {
+    float: left;
+}
+
+.divAno{
+    float: left;
+    padding: 22px 10px 0 0;
+    width: 25%;
+    text-align: right;
+}
+
+.divFormac {
+    padding: 22px 10px 0 0;
+}
+
+.container {
+    padding-bottom: 30px;
+}
+
+.divCenter{
+    width: 50%;
+    margin: 0 auto;
+}
+
+#nomeFoto {
+    background-color: rgba(211, 211, 211, 0.8);
+}
+
+#dadosPessoais {
+    background-color: rgba(173, 216, 230, 0.8);
+}
+
+#formacaoAcademica {
+    background-color: rgba(255, 218, 185, 0.8);
+}
+
+#experienciaProfissional {
+    background-color: rgba(255, 88, 25, 0.5);
+}
+
+#outros {
+    background-color: rgba(211, 211, 211, 0.8);
+}
+
+body {
+    background-color: #E6E6FA;
+}
+
+h1 {
+    text-align: center;
+}
