@@ -1,59 +1,96 @@
-div {
-    overflow: hidden;
+header, main, footer {
+    padding-left: 350px;
 }
 
-.noStyleType {
-    list-style-type: none;
+nav.navbar {
+    background-color: #00000000;
+    box-shadow: 0 0px 0px 0 rgba(0,0,0,0.14);
 }
 
-.img-main {
-    float: left;
-}
-
-.divAno{
-    float: left;
-    padding: 22px 10px 0 0;
-    width: 25%;
-    text-align: right;
-}
-
-.divFormac {
-    padding: 22px 10px 0 0;
-}
-
-.container {
-    padding-bottom: 30px;
-}
-
-.divCenter{
-    width: 50%;
+.divCenter {
     margin: 0 auto;
+    width: fit-content;
 }
 
-#nomeFoto {
-    background-color: rgba(211, 211, 211, 0.8);
+.img-user {
+    width: 9rem !important;
+    height: 9rem !important;
 }
 
-#dadosPessoais {
-    background-color: rgba(173, 216, 230, 0.8);
+.text-email{
+    color: rgba(0,0,0,0.87);
+    display: block;
 }
 
-#formacaoAcademica {
-    background-color: rgba(255, 218, 185, 0.8);
+.icon-email {
+    float: left;
+    height: 48px;
+    line-height: 48px;
+    margin: 0 4px 0 0;
+    width: 24px;
+    color: rgba(0,0,0,0.54);
 }
 
-#experienciaProfissional {
-    background-color: rgba(255, 88, 25, 0.5);
+.inline {
+    display: inline;
 }
 
-#outros {
-    background-color: rgba(211, 211, 211, 0.8);
+.user-view {
+    padding: 15px 0px 0 !important;
 }
 
-body {
-    background-color: #E6E6FA;
+li.user-view{
+    padding: 0 !important;
 }
 
-h1 {
-    text-align: center;
+.email {
+    display: inline !important;
+}
+
+.divider-m{
+    margin: 8px 30px 0 30px !important;
+}
+
+.sidenav {
+    width: 350px !important;
+}
+
+.titulo-texts {
+    font-size: 1.2rem;
+}
+
+#conteudo h6{
+    font-size: 1rem;
+    margin: 0 0 .46rem 0 !important;
+}
+#informacoes h6.subtitle {
+    font-size: 1.1rem !important;
+}
+
+#informacoes h6 {
+    font-size: 0.97rem!important;
+}
+
+.interesses{
+    display: inline;
+}
+
+.interesses .icon-email{
+    float: inherit;
+    margin: 0;
+}
+
+@media only screen and (max-width : 992px) {
+    header, main, footer {
+        padding-left: 0;
+    }
+
+    .divider-m{
+        margin: 8px 10px 0 10px !important;
+    }
+}
+@media only screen and (min-width: 993px){
+    #conteudo.container {
+        width: 80%;
+    }
 }

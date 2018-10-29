@@ -1,0 +1,77 @@
+{
+    "navbar":{
+        "iconColor": "#26a69a"
+    },
+    "sidenav": {
+        "info":[
+            {
+                "name": "Matheus Santiago Neto",
+                "image": "src/core/assets/images/user.png"
+            },
+            [
+                {
+                    "icon": "src/core/assets/images/linkicon.png",
+                    "link": "https://www.linkedin.com/in/matheus-santiago-97b8a9140/"
+                },
+                {
+                    "icon" : "src/core/assets/images/giticon.png",
+                    "link": "https://github.com/matheussn"
+                },
+                {
+                    "icon" : "src/core/assets/images/lattesicon.png",
+                    "link": ""
+                }
+            ],
+            {
+                "contato": "matheusneto23@gmail.com",
+                "icon": "email",
+                "class": "tiny material-icons icon-email"
+            }
+        ],
+        "text":[
+            {
+                "icon": "add_circle_outline",
+                "title": "Objetivos",
+                "content": "Objetivos; Objetivos; Objetivos; Objetivos; Objetivos; Objetivos; Objetivos; Objetivos; Objetivos; Objetivos; "
+            },
+            {
+                "icon": "add_circle_outline",
+                "title": "Informações Gerais",
+                "content": [
+                    {
+                        "subtitle": "Pessoais",
+                        "content":[
+                            {
+                                "title": "Aniversário",
+                                "content": "23/01/2018"
+                            },
+                            {
+                                "title": "Estado Civil",
+                                "content": "Solteiro"
+                            },
+                            {
+                                "title": "Nacionalidade",
+                                "content": "Brasileiro"
+                            }
+                        ]
+                    },
+                    {
+                        "subtitle": "Interesses",
+                        "content":[
+                            {
+                                "icon": "music_note",
+                                "content": "Música"
+                            },
+                            {
+                                "icon": "computer",
+                                "content": "Computação"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "main": {},
+    "footer":{}
+}
