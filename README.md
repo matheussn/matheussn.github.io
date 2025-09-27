@@ -42,6 +42,24 @@ Site estático pronto para GitHub Pages com deploy via branch (sem Actions). Inc
 - AdSense: `src/components/AdSlot.tsx` só carrega script em produção; em dev mostra “Ad preview”.
 - GA4: por padrão desativado. Defina `GA_MEASUREMENT_ID` e aceite o banner de cookies para ativar.
 
+## Ads.txt (AdSense)
+
+- Onde encontrar o Publisher ID: no Google AdSense, acesse Conta → Informações da conta → ID do editor (formato `pub-…`).
+- Como configurar (use apenas UMA opção):
+  1. Defina `ADSENSE_PUB_ID="pub-1234567890123456"`, ou
+  2. Defina `ADS_TXT_CONTENT` com o conteúdo completo do seu `ads.txt` (pode ser multilinha).
+- Build: `npm run build:docs`.
+- O script `scripts/after-export.js` garante que `docs/ads.txt` seja gerado conforme as variáveis. Se nenhuma variável estiver definida, usa o fallback `public/ads.txt`.
+- Verificação: após publicar, abra `https://SEU_DOMINIO/ads.txt` e confira o conteúdo.
+- Propagação: o status no AdSense pode levar horas ou dias para atualizar.
+
+Importante para Project Pages (sem domínio custom)
+- Se o site for publicado em `https://usuario.github.io/SEU_REPO`, o AdSense exige o `ads.txt` no host raiz: `https://usuario.github.io/ads.txt` (e não em `.../SEU_REPO/ads.txt`).
+- Soluções:
+  1. Use um domínio custom (recomendado) com `CNAME` → `usuario.github.io`.
+  2. Publique um `ads.txt` no repositório raíz `usuario/usuario.github.io`.
+- Recomenda-se domínio custom para aprovações do AdSense.
+
 ## Estrutura do Conteúdo
 
 - Posts MDX: `src/content/blog/*.mdx`

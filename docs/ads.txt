@@ -1,0 +1,5 @@
+# ads.txt – Authorized Digital Sellers
+# Substitua o Publisher ID pelo seu (formato `pub-xxxxxxxxxxxxxxxx`).
+# Para geração automática, defina ADSENSE_PUB_ID ou ADS_TXT_CONTENT no ambiente.
+google.com, pub-6473370680378552, DIRECT, f08c47fec0942fa0
+
