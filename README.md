@@ -39,7 +39,9 @@ Site estático pronto para GitHub Pages com deploy via branch (sem Actions). Inc
 
 ## AdSense e Analytics
 
-- AdSense: `src/components/AdSlot.tsx` só carrega script em produção; em dev mostra “Ad preview”.
+- AdSense:
+  - Script global do AdSense é injetado automaticamente em produção se `ADSENSE_CLIENT_ID` (ou `NEXT_PUBLIC_ADSENSE_CLIENT_ID`) estiver definido.
+  - Componentes de anúncio (`AdSlot`) mostram “Ad preview” em dev e usam o script global em produção.
 - GA4: por padrão desativado. Defina `GA_MEASUREMENT_ID` e aceite o banner de cookies para ativar.
 
 ## Ads.txt (AdSense)
