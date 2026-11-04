@@ -12,4 +12,10 @@ export const socialLinks = [
   {label: 'LinkedIn', href: 'https://www.linkedin.com/in/matheussn/'},
 ];
 
-export default {showProducts, author, socialLinks};
+// Post-it "estudando agora" do hero, por idioma. Vazio: o hero mostra a foto.
+export const studyingNow = {
+  'pt-BR': '',
+  en: '',
+};
+
+export default {showProducts, author, socialLinks, studyingNow};

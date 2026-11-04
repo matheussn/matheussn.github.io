@@ -1,30 +1,215 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * Tema "Caderno": claro = Caderno de estudos, escuro = Caderno noturno.
+ *
+ * Todo o visual sai dos tokens --nd-* abaixo. Para trocar de tema, troque
+ * os valores desses dois blocos; o resto do CSS (aqui e nos módulos da home)
+ * só usa os tokens.
  */
 
-/* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  /* Tokens do tema (claro) */
+  --nd-paper: #fafaf7;
+  --nd-grid: #e6e8ee;
+  --nd-surface: #ffffff;
+  --nd-text: #1e2a4a;
+  --nd-muted: #3e4863;
+  --nd-subtle: #5b647c;
+  --nd-placeholder: #8a92a6;
+  --nd-accent: #2346d8; /* tinta: links, anotações, botão principal */
+  --nd-on-accent: #ffffff;
+  --nd-marker: #ffe15a; /* marca-texto, post-it, tag em destaque */
+  --nd-on-marker: #1e2a4a;
+  --nd-highlight-bg: var(--nd-marker);
+  --nd-highlight-text: inherit;
+  --nd-chip: #e8ecf7;
+  --nd-border: #1e2a4a; /* contorno forte dos cards */
+  --nd-border-soft: #d5d9e2;
+  --nd-card-shadow: #1e2a4a; /* sombra sólida dos cards */
+  --nd-button-shadow: #1e2a4a;
+  --nd-postit-shadow: rgba(30, 42, 74, 0.45);
+
+  --nd-font-sans: 'Bricolage Grotesque', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --nd-font-hand: 'Caveat', 'Segoe Print', cursive;
+  --nd-font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --nd-grid-size: 28px;
+  --nd-radius: 18px;
+  --nd-radius-sm: 14px;
+
+  /* Infima a partir dos tokens */
+  --ifm-color-primary: #2346d8;
+  --ifm-color-primary-dark: #1f3fc2;
+  --ifm-color-primary-darker: #1e3bb8;
+  --ifm-color-primary-darkest: #193197;
+  --ifm-color-primary-light: #3a5add;
+  --ifm-color-primary-lighter: #4663df;
+  --ifm-color-primary-lightest: #6a82e5;
+  --ifm-background-color: var(--nd-paper);
+  --ifm-background-surface-color: var(--nd-paper);
+  --ifm-font-color-base: var(--nd-text);
+  --ifm-heading-color: var(--nd-text);
+  --ifm-font-family-base: var(--nd-font-sans);
+  --ifm-heading-font-family: var(--nd-font-sans);
+  --ifm-font-family-monospace: var(--nd-font-mono);
+  --ifm-heading-font-weight: 800;
+  --ifm-navbar-background-color: var(--nd-paper);
+  --ifm-navbar-shadow: none;
+  --ifm-footer-background-color: transparent;
+  --ifm-card-background-color: var(--nd-surface);
+  --ifm-toc-border-color: var(--nd-border-soft);
+  --ifm-hr-background-color: var(--nd-border-soft);
+  --ifm-code-font-size: 92%;
+  --ifm-button-border-radius: var(--nd-radius-sm);
+  --docusaurus-highlighted-code-line-bg: rgba(35, 70, 216, 0.1);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  /* Tokens do tema (escuro) */
+  --nd-paper: #0f1828;
+  --nd-grid: #1a2638;
+  --nd-surface: #18243a;
+  --nd-text: #e9edf3;
+  --nd-muted: #b4bfd0;
+  --nd-subtle: #95a1b5;
+  --nd-placeholder: #6f7b90;
+  --nd-accent: #ffd95a;
+  --nd-on-accent: #0f1828;
+  --nd-marker: #ffd95a;
+  --nd-on-marker: #0f1828;
+  --nd-highlight-bg: rgba(255, 217, 90, 0.2);
+  --nd-highlight-text: var(--nd-marker);
+  --nd-chip: #26344f;
+  --nd-border: #e9edf3;
+  --nd-border-soft: #33425f;
+  --nd-card-shadow: var(--nd-marker);
+  --nd-button-shadow: #e9edf3;
+  --nd-postit-shadow: rgba(0, 0, 0, 0.5);
+
+  --ifm-color-primary: #ffd95a;
+  --ifm-color-primary-dark: #ffd23a;
+  --ifm-color-primary-darker: #ffce2a;
+  --ifm-color-primary-darkest: #f7c000;
+  --ifm-color-primary-light: #ffe07a;
+  --ifm-color-primary-lighter: #ffe38a;
+  --ifm-color-primary-lightest: #ffeaaa;
+  --docusaurus-highlighted-code-line-bg: rgba(255, 217, 90, 0.12);
+}
+
+/* Papel quadriculado */
+html {
+  background-color: var(--nd-paper);
+  background-image:
+    linear-gradient(var(--nd-grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--nd-grid) 1px, transparent 1px);
+  background-size: var(--nd-grid-size) var(--nd-grid-size);
+}
+
+body {
+  background: transparent;
+}
+
+/* Navbar e rodapé */
+.navbar {
+  border-bottom: 1px solid var(--nd-border-soft);
+}
+
+.navbar__title {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.navbar__link {
+  font-weight: 600;
+}
+
+.footer {
+  border-top: 1px solid var(--nd-border-soft);
+}
+
+.footer__copyright {
+  font-family: var(--nd-font-hand);
+  font-size: 1.35rem;
+  color: var(--nd-subtle);
+}
+
+/* Botão principal do Infima com a sombra sólida do caderno */
+.button--primary {
+  --ifm-button-color: var(--nd-on-accent);
+  box-shadow: 4px 4px 0 var(--nd-button-shadow);
+}
+
+/* Marca-texto reutilizável (<mark> e .nd-highlight) */
+mark,
+.nd-highlight {
+  background: linear-gradient(
+    transparent 55%,
+    var(--nd-highlight-bg) 55%,
+    var(--nd-highlight-bg) 92%,
+    transparent 92%
+  );
+  color: var(--nd-highlight-text);
+  padding: 0 0.15em;
+}
+
+/* Tags (lista de posts, post e página de tags) */
+a[rel='tag'] {
+  border: none;
+  border-radius: 999px;
+  background: var(--nd-chip);
+  color: var(--nd-text);
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+
+a[rel='tag']::before {
+  content: '#';
+}
+
+a[rel='tag']:hover {
+  background: var(--nd-marker);
+  color: var(--nd-on-marker);
+  text-decoration: none;
+}
+
+/* Lista de posts: cada post vira um card do caderno */
+.blog-list-page article {
+  padding: 1.75rem;
+  border: 1.5px solid var(--nd-border);
+  border-radius: var(--nd-radius);
+  background: var(--nd-surface);
+  box-shadow: 6px 6px 0 var(--nd-card-shadow);
+}
+
+.blog-list-page article header h2 a {
+  color: var(--nd-text);
+}
+
+/* Barra lateral do blog: título escrito à mão */
+.blog-wrapper aside [class*='sidebarItemTitle'] {
+  font-family: var(--nd-font-hand);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--nd-accent);
+}
+
+/* Leitura do post */
+.blog-post-page article .markdown {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+
+.markdown blockquote {
+  border-left-color: var(--nd-marker);
+  background: var(--nd-surface);
+  border-radius: 0 var(--nd-radius-sm) var(--nd-radius-sm) 0;
+  padding: 1rem 1.25rem;
+}
+
+.markdown img {
+  border-radius: var(--nd-radius-sm);
+}
+
+/* Blocos de código com contorno de card */
+.theme-code-block {
+  border: 1.5px solid var(--nd-border-soft);
+  border-radius: var(--nd-radius-sm);
 }

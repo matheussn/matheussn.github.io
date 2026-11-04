@@ -23,6 +23,7 @@ export default function latestPostsPlugin() {
           date: metadata.date,
           permalink: metadata.permalink,
           readingTime: metadata.readingTime,
+          tags: metadata.tags.map(({label, permalink}) => ({label, permalink})),
         }));
 
       actions.setGlobalData({posts});

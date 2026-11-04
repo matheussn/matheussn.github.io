@@ -1,11 +1,11 @@
 .section {
-  padding: 2.5rem 0;
+  padding: 3rem 0;
 }
 
 .list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+  gap: 1.5rem;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -16,16 +16,16 @@
   flex-direction: column;
   gap: 0.5rem;
   height: 100%;
-  padding: 1.25rem;
-  border: 1px solid var(--ifm-color-emphasis-300);
-  border-radius: var(--ifm-card-border-radius);
-  background: var(--ifm-card-background-color);
-  color: var(--ifm-font-color-base);
+  padding: 1.5rem;
+  border: 1.5px solid var(--nd-border);
+  border-radius: var(--nd-radius);
+  background: var(--nd-surface);
+  color: var(--nd-text);
+  box-shadow: 6px 6px 0 var(--nd-card-shadow);
 }
 
 .card:hover {
-  border-color: var(--ifm-color-primary);
-  color: var(--ifm-font-color-base);
+  color: var(--nd-text);
   text-decoration: none;
 }
 

@@ -12,7 +12,16 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'Neto.dev',
   tagline: 'Notas de um dev curioso',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.svg',
+
+  // Fontes do tema "Caderno" (tokens em src/css/custom.css)
+  headTags: [
+    {tagName: 'link', attributes: {rel: 'preconnect', href: 'https://fonts.googleapis.com'}},
+    {tagName: 'link', attributes: {rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous'}},
+  ],
+  stylesheets: [
+    'https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Caveat:wght@500;700&family=JetBrains+Mono:wght@400;600&display=swap',
+  ],
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -82,6 +91,13 @@ const config = {
       },
       navbar: {
         title: 'Neto.dev',
+        logo: {
+          alt: 'Neto.dev',
+          src: 'img/logo.svg',
+          srcDark: 'img/logo-dark.svg',
+          width: 36,
+          height: 36,
+        },
         items: [
           {to: '/blog', label: 'Blog', position: 'left'},
           {to: '/blog/archive', label: 'Arquivo', position: 'left'},
@@ -95,12 +111,12 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
+        // Sem tradução em i18n/*/footer.json, para o ano continuar dinâmico
         copyright: `© ${new Date().getFullYear()} Matheus Neto`,
       },
       prism: {
         theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
+        darkTheme: prismThemes.nightOwl,
       },
     }),
 };

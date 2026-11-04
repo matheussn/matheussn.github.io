@@ -326,9 +326,6 @@
     "message": "Tags",
     "description": "The title of the tag list page"
   },
-  "home.hero.tagline": {
-    "message": "Notes from a curious dev"
-  },
   "home.hero.readBlog": {
     "message": "Read the blog"
   },
@@ -348,7 +345,7 @@
     "message": "Latest posts"
   },
   "home.latestPosts.viewAll": {
-    "message": "View all"
+    "message": "view all"
   },
   "home.latestPosts.empty": {
     "message": "No posts published yet."
@@ -367,5 +364,26 @@
   },
   "home.about.highlight.iot": {
     "message": "IoT research applied to Physics teaching at UFU, enabling remote experiments for over 20,000 teachers and students"
+  },
+  "home.hero.studyingNow": {
+    "message": "studying now:"
+  },
+  "home.hero.photoCaption": {
+    "message": "me, studying"
+  },
+  "home.hero.greeting": {
+    "message": "hi, I'm Matheus →"
+  },
+  "home.hero.title": {
+    "message": "My study notebook, {highlight} for anyone to read."
+  },
+  "home.hero.titleHighlight": {
+    "message": "open"
+  },
+  "home.hero.text": {
+    "message": "Notes from a curious dev on generative AI, serverless architecture and whatever else comes along. In Portuguese and English."
+  },
+  "home.latestPosts.readingTime": {
+    "message": "{minutes} min read"
   }
 }
